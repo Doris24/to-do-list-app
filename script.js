@@ -8,7 +8,7 @@ function newItem(){
   li.append(inputValue);
 
   if (inputValue === '') {
-    alert("You must write something!");
+    alert('You must write something!');
   } else {
     let list = $('#list');
     list.append(li);
@@ -19,14 +19,14 @@ function newItem(){
     li.toggleClass('strike');
   }
 
-  li.on("dblclick",crossOut);
+  li.on('dblclick',crossOut);
 
   //3(i). Adding the delete button "X":
   let deleteButton = $('<button></button>').addClass('deleteButton');
   deleteButton.append(document.createTextNode('X'));
   li.append(deleteButton);
 
-  deleteButton.on("click", deleteListItem);
+  deleteButton.on('click', deleteListItem);
   //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
   function deleteListItem(){
     li.addClass('delete');
